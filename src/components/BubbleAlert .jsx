@@ -1,11 +1,12 @@
+import React from 'react';
 const styles = {
     bubbleAlert: {
         backgroundColor: '#e9725a',
-        borderRadius: '15px',
+        borderRadius: '14px',
         padding: '2px 10px',
         color: '#fff',
         fontSize: '0.9rem',
-        width: '20px',
+        width: '25px'
 
     }
 
@@ -24,3 +25,4 @@ export function BubbleAlert({ value }) {
         </span>
     )
 }
+export { BubbleAlert as default };

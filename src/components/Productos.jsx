@@ -14,6 +14,7 @@ const styles = {
 }
 export function Productos({ productos, agregarAlCarrito }) {
 
+
     return (
         <div style={styles.productos}>
             {productos.map(producto =>

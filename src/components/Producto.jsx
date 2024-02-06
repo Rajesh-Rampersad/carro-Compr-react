@@ -17,7 +17,8 @@ const styles = {
         boxShadow: 'rgb(0, 0, 0, 0.5) 0px 2px 5px)',
         backgroundColor: '#fff',
         color: '#000000',
-        fontSize: '.9em'
+        fontSize: '.9em',
+        right: 0,
     }
 }
 

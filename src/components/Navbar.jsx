@@ -9,15 +9,19 @@ const styles = {
         position: 'relative',
         height: '100px',
         padding: '0 50px',
-        boxShadow: '0 4px 10px rgb(0,0,0,0.4)'
+        boxShadow: '0 4px 10px rgba(0,0,0,0.4)'
 
     }
 }
-export function Navbar() {
+export function Navbar({ carro, esCarroVisible, mostrarCarro }) {
     return (
         <nav style={styles.navbar}>
             <Logo />
-            <Carro />
+            <Carro
+                carro={carro}
+                esCarroVisible={esCarroVisible}
+                mostrarCarro={mostrarCarro}
+            />
         </nav>
     )
 }

@@ -1,4 +1,6 @@
 import { BubbleAlert } from "./BubbleAlert "
+import { DetallesCarro } from './DetallesCarro'
+
 
 const styles = {
     carro: {
@@ -6,25 +8,31 @@ const styles = {
         color: '#fff',
         borderRadius: '15px',
         padding: '15px',
-        border: 'one',
+        border: 'none',
     },
     bubble: {
         position: 'relative',
         left: '12px',
         top: '20px',
 
-    }
+    },
+
 }
 
-export function Carro() {
+export function Carro({ carro, esCarroVisible, mostrarCarro }) {
+
+    const cantidad = carro.reduce((acc, el) => acc + el.cantidad, 0);
     return (
         <div>
             <span style={styles.bubble}>
-                <BubbleAlert value={10} />
+                {cantidad !== 0 ?
+                    <BubbleAlert value={cantidad}></BubbleAlert> :
+                    null
+                }
             </span>
-            <button style={styles.carro}>
-                Carro
-            </button>
+            <button onClick={mostrarCarro} style={styles.carro}>Carro</button>
+            {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
+
         </div>
     )
 }
